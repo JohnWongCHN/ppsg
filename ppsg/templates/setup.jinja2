@@ -1,0 +1,33 @@
+from setuptools import setup, find_packages
+
+f = open('README.md', 'r')
+LONG_DESCRIPTION = f.read()
+f.close()
+
+setup(
+    name='{{ project }}',
+    version='0.0.1',
+    description='{{ desc }}',
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown',
+    author='{{ author }}',
+    author_email='{{ email }}',
+    url='',
+    license='MIT',
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    packages=find_packages(exclude=['ez_setup', 'tests*']), # 不包括哪些Package
+    package_data={'{{ project }}': ['templates/*']}, # 包括相关文件
+    include_package_data=True,
+    install_requires=[
+        'Click',
+    ],
+    # 添加命令行入口
+    entry_points={
+        'console_scripts': [
+            '{{ project }} = {{ project }}.main:main',
+        ]
+    },
+)
