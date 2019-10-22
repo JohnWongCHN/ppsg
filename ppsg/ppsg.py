@@ -4,7 +4,9 @@ import pkg_resources
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 class Core():
-    """ main class """
+    """
+    通用python项目文件结构生成器
+    """
     def __init__(self, name, desc, author, email):
         self.project_name = name
         self.project_desc = desc
@@ -145,7 +147,7 @@ class Core():
 @click.option('-m', '--email', help='作者邮箱', prompt=True, default='john-wong@outlook.com')
 def main(name, desc, author, email):
     """
-    main
+    通用python项目文件结构生成器.
     """
     project = Core(name=name, desc=desc, author=author, email=email)
     project.gen_dir()
