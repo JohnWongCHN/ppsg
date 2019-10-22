@@ -6,7 +6,7 @@ f.close()
 
 setup(
     name='ppsg',
-    version='0.0.2',
+    version='0.0.1',
     description='A Python Project Structure Generator',
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
